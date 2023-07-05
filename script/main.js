@@ -10,9 +10,12 @@ const vueApp = Vue.createApp({
     },
 
     methods: {
-        toggleFullscreen(index) {
+        fullscreenTrue(index) {
             this.selectedDisk = index;
-            this.fullscreenVisible = !this.fullscreenVisible;
+            this.fullscreenVisible = true;
+        },
+        fullscreenFalse() {
+            this.fullscreenVisible = false;
         }
     },
 
