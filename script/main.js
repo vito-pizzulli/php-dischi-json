@@ -3,7 +3,16 @@ const vueApp = Vue.createApp({
     data() {
         return {
             apiUrl: './server.php',
-            disks: []
+            disks: [],
+            fullscreenVisible: false,
+            selectedDisk: ''
+        }
+    },
+
+    methods: {
+        toggleFullscreen(index) {
+            this.selectedDisk = index;
+            this.fullscreenVisible = !this.fullscreenVisible;
         }
     },
 
