@@ -14,7 +14,9 @@
 <body>
 
     <div id="app">
-        {{ prova }}
+        <ul>
+            <li v-for="(disk, index) in disks" :key="index"> {{ disk.title }}</li>
+        </ul>
     </div>
 
     <script src="./script/main.js"></script>

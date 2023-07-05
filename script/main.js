@@ -2,7 +2,8 @@ const vueApp = Vue.createApp({
 
     data() {
         return {
-            apiUrl: './server.php'
+            apiUrl: './server.php',
+            disks: []
         }
     },
 
