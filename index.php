@@ -16,6 +16,9 @@
     
     <!-- Vue 3 CDN Import-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Font Awesome 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -27,7 +30,7 @@
         </header>
         <main>
             <div class="container">
-                <div class="card" v-for="(disk, index) in disks" :key="index" @click="toggleFullscreen(index)">
+                <div class="card" v-for="(disk, index) in disks" :key="index" @click="fullscreenTrue(index)">
                     <img :src="disk.poster" alt="Disk Poster Image">
                     <h2>{{ disk.title }}</h2>
                     <span>{{ disk.author }}</span>
@@ -40,6 +43,7 @@
                         <span>{{ disk.author }}</span>
                         <span>{{ disk.year }}</span>
                         <span>{{ disk.genre }}</span>
+                        <span class="x-icon" @click.stop="fullscreenFalse()"><i class="fa-solid fa-xmark"></i></span>
                     </div>
                 </div>
             </div>
