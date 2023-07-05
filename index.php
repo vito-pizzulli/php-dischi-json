@@ -27,12 +27,20 @@
         </header>
         <main>
             <div class="container">
-                <div class="card" v-for="(disk, index) in disks" :key="index">
+                <div class="card" v-for="(disk, index) in disks" :key="index" @click="toggleFullscreen(index)">
                     <img :src="disk.poster" alt="Disk Poster Image">
                     <h2>{{ disk.title }}</h2>
                     <span>{{ disk.author }}</span>
                     <span>{{ disk.year }}</span>
                     <span>{{ disk.genre }}</span>
+
+                    <div class="fullscreen" v-if="fullscreenVisible && selectedDisk === index">
+                        <img :src="disk.poster" alt="Disk Poster Image">
+                        <h2>{{ disk.title }}</h2>
+                        <span>{{ disk.author }}</span>
+                        <span>{{ disk.year }}</span>
+                        <span>{{ disk.genre }}</span>
+                    </div>
                 </div>
             </div>
         </main>
