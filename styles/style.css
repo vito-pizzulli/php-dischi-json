@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 header {
     background-color: #06131f;
     height: 10vh;
@@ -23,9 +27,41 @@ header div.container img {
 main {
     background-color: #1d2d3c;
     height: 90vh;
+    overflow-y: scroll;
 }
 
 main div.container {
     width: 80%;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main div.container div.card {
+    width: calc(100% / 3 - 4rem);
+    background-color: #112030;
+    border-radius: 10px;
+    color: white;
+    margin: 2rem;
+    padding: 2rem 4rem;
+    text-align: center;
+}
+
+main div.container div.card img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+main div.container div.card h2 {
+    margin-bottom: .5rem;
+}
+
+main div.container div.card span {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+main div.container div.card span:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 1.3rem;
 }
