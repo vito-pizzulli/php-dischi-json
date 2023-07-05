@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    position: relative;
 }
 
 header {
@@ -67,15 +68,43 @@ main div.container div.card span:nth-of-type(2) {
 }
 
 main div.container div.card div.fullscreen {
+    background-color: #112031f1;
+    border-radius: 10px;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
-    margin: 1rem;
-    top: 0;
-    left: 0;
+    width: 95vw;
+    height: 95vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main div.container div.card div.fullscreen img {
-    width: 100px;
-    background-color: #1120317a;
+    width: 400px;
+}
+
+main div.container div.card div.fullscreen h2 {
+    font-size: 2rem;
+}
+
+main div.container div.card div.fullscreen span {
+    font-size: 1.3rem;
+}
+
+main div.container div.card div.fullscreen span:nth-of-type(2) {
+    font-size: 1.7rem;
+}
+
+main div.container div.card div.fullscreen span.x-icon {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 40px;
+    aspect-ratio: 1;
+    line-height: 40px;
 }
