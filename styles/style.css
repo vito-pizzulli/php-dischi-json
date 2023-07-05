@@ -1,0 +1,31 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #06131f;
+    height: 10vh;
+}
+
+header div.container {
+    width: 90%;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+header div.container img {
+    width: 50px;
+}
+
+main {
+    background-color: #1d2d3c;
+    height: 90vh;
+}
+
+main div.container {
+    width: 80%;
+    margin: auto;
+}
