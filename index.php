@@ -14,7 +14,7 @@
 <body>
 
     <div id="app">
-        
+        {{ prova }}
     </div>
 
     <script src="./script/main.js"></script>
